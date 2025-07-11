@@ -1,214 +1,39 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <title>Centro Médico Premium - Cáceres</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;pt-br&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;meta http-equiv=&quot;Content-Security-Policy&quot; content=&quot;upgrade-insecure-requests&quot;&gt;
+    &lt;title&gt;Centro Médico Premium - Cáceres&lt;/title&gt;
 
-    <style>
-        /* --- ESTILOS GERAIS (Seu Passo 1) --- */
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0; /* Removido padding para o vídeo ocupar a tela toda */
-            line-height: 1.6;
-            background-color: #f9fafb;
-            color: #333;
-        }
+    &lt;/head&gt;
+&lt;body&gt;
 
-        .content-wrapper {
-            padding: 20px 40px; /* Adiciona espaçamento nas seções de conteúdo */
-        }
-        
-        /* --- SEÇÃO DE VÍDEO (Seu Passo 2) --- */
-        .video-container {
-            position: relative;
-            height: 70vh; /* 70% da altura da tela */
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-
-        #bg-video {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            min-width: 100%;
-            min-height: 100%;
-            z-index: -1; /* Fica atrás do conteúdo */
-        }
-
-        .video-overlay {
-            position: relative;
-            z-index: 1;
-            color: white;
-            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-        }
-
-        .video-overlay h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-        }
-
-        .cta-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 15px 30px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 50px;
-            transition: background-color 0.3s;
-        }
-        .cta-button:hover {
-            background-color: #0056b3;
-        }
-
-        /* --- SEÇÃO DE AUTONOMIA (Seu Passo 3) --- */
-        .autonomia-section {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap; /* Permite que os cards quebrem a linha em telas menores */
-            padding: 50px 0;
-        }
-        
-        .autonomia-section h2 {
-            width: 100%;
-            text-align: center;
-            margin-bottom: 40px;
-            font-size: 2.5em;
-        }
-
-        .card {
-            background: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            width: 300px;
-            padding: 20px;
-            margin: 15px;
-            text-align: center;
-        }
-
-        .card h3 {
-            font-size: 2.5em; /* Emoji grande */
-            margin-top: 0;
-        }
-        
-        .card ul {
-            list-style: none;
-            padding: 0;
-        }
-        .card ul li {
-            margin-bottom: 10px;
-        }
-
-        /* --- BANNER LGPD --- */
-        .lgpd-banner {
-            display: none; /* Começa escondido, o JS decide se mostra */
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 20px;
-            background: #222;
-            color: #fff;
-            box-shadow: 0 -2px 10px rgba(0,0,0,0.2);
-            z-index: 1000;
-            text-align: center;
-        }
-        .lgpd-banner a {
-            color: #fff;
-            text-decoration: underline;
-        }
-        .lgpd-banner button {
-            margin-left: 15px;
-            padding: 8px 15px;
-            border: none;
-            background-color: #007bff;
-            color: white;
-            cursor: pointer;
-            border-radius: 5px;
-        }
-    </style>
-</head>
-<body>
-
-    <header class="video-container">
-        <video autoplay muted loop id="bg-video">
-            <source src="TOUR_VIRTUAL.mp4" type="video/mp4">
-            Seu navegador não suporta vídeos.
-        </video>
-        <div class="video-overlay">
-            <h1>Aluguel de Espaço Médico Premium</h1>
-            <p>Contrato de 5 anos | Localização Estratégica | Recepção Pronta</p>
-            <a href="#contato" class="cta-button">Agendar Visita</a>
-        </div>
-    </header>
-
-    <main>
-        <div class="content-wrapper">
-             <section class="autonomia-section">
-                <h2>Autonomia para o seu Negócio</h2>
-                <div class="card">
-                    <h3>🏢</h3>
-                    <h4>Você no Controlo</h4>
-                    <ul>
-                        <li>Sublocação de salas permitida</li>
-                        <li>Flexibilidade para escolher equipamentos</li>
-                        <li>Defina o seu próprio horário de funcionamento</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>🤝</h3>
-                    <h4>Parceria Simplificada</h4>
-                    <ul>
-                        <li>Contrato de longo prazo (5 anos)</li>
-                        <li>Apoio na gestão e marketing inicial</li>
-                        <li>Estrutura de recepção partilhada e pronta</li>
-                    </ul>
-                </div>
-                <div class="card">
-                    <h3>📍</h3>
-                    <h4>Localização Privilegiada</h4>
-                    <ul>
-                        <li>Ponto estratégico em Cáceres</li>
-                        <li>Fácil acesso para pacientes</li>
-                        <li>Visibilidade e prestígio para a sua clínica</li>
-                    </ul>
-                </div>
-            </section>
-        </div>
-    </main>
-    
-    <div id="lgpd-banner" class="lgpd-banner">
-        Utilizamos cookies para melhorar sua experiência. 
-        <a href="politica-privacidade.html">Saiba mais</a>
-        <button id="aceitarCookies">Aceitar</button>
+<!-- Seção de Contato -->
+<section id="contato" class="contact-section">
+    <div class="content-wrapper">
+        <h2>Agende uma Visita</h2>
+        <form class="contact-form" action="URL_DO_SEU_SERVICO_DE_FORMULARIO" method="POST">
+            <div class="form-group">
+                <label for="name">Nome Completo</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Telefone (Opcional)</label>
+                <input type="tel" id="phone" name="phone">
+            </div>
+            <div class="form-group">
+                <label for="message">Mensagem</label>
+                <textarea id="message" name="message" required>Olá, gostaria de agendar uma visita para conhecer o espaço.</textarea>
+            </div>
+            <button type="submit" class="submit-button">Enviar Mensagem</button>
+        </form>
     </div>
+</section>
 
-    <script>
-        // Script para o banner LGPD
-        const lgpdBanner = document.getElementById('lgpd-banner');
-        const acceptButton = document.getElementById('aceitarCookies');
-
-        // Verifica se os cookies já foram aceites antes
-        if (!localStorage.getItem('cookiesAceitos')) {
-            lgpdBanner.style.display = 'block';
-        }
-
-        acceptButton.addEventListener('click', function() {
-            localStorage.setItem('cookiesAceitos', 'true');
-            lgpdBanner.style.display = 'none';
-        });
-    </script>
-</body>
-</html>
+&lt;/body&gt;
+&lt;/html&gt;
